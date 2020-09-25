@@ -6,7 +6,7 @@
 
 ## SYNOPSIS :sparkles:
 
-cFetch is a simple wrapper around fetch using cancelable promise ([CPromise](https://www.npmjs.com/package/c-promise2)). 
+cpFetch is a simple wrapper around fetch using cancelable promise ([CPromise](https://www.npmjs.com/package/c-promise2)). 
 This lib can be used for both backend and frontend development, platform specific fetch API is provided by 
 [cross-fetch package](https://www.npmjs.com/package/cross-fetch).
 
@@ -49,10 +49,10 @@ module global export- `cpFetch`
 
 A simple example:
 ````javascript
-const cFetch= require('cp-fetch');
+const cpFetch= require('cp-fetch');
 const url= 'https://run.mocky.io/v3/753aa609-65ae-4109-8f83-9cfe365290f0?mocky-delay=5s';
 
-const chain = cFetch(url, {timeout: 10000})
+const chain = cpFetch(url, {timeout: 10000})
     .then(response => response.json())
     .then(data => console.log(`Done: `, data), err => console.log(`Error: `, err))
 
@@ -65,13 +65,13 @@ setTimeout(()=> chain.cancel(), 1000); // abort the request after 1000ms
 The same using generators as async function:
 
 ````javascript
-const cFetch= require('cp-fetch');
+const cpFetch= require('cp-fetch');
 const CPromise= require('c-promise2');
 const url= 'https://run.mocky.io/v3/753aa609-65ae-4109-8f83-9cfe365290f0?mocky-delay=5s';
 
 const chain= CPromise.from(function*(){
     try{
-        const response= yield cFetch(url, {timeout: 5000});
+        const response= yield cpFetch(url, {timeout: 5000});
         console.log(`Done: `, yield response.json())
     }catch(err){
         console.log(`Error: `, err)
@@ -84,12 +84,12 @@ const chain= CPromise.from(function*(){
 #### Abortable concurrent requests
 
 ````javascript
-const cFetch= require('cp-fetch');
+const cpFetch= require('cp-fetch');
 const CPromise = require('c-promise2');
 
 const chain= CPromise.race([
-    cFetch("https://run.mocky.io/v3/753aa609-65ae-4109-8f83-9cfe365290f0?mocky-delay=3s"),
-    cFetch("https://run.mocky.io/v3/30a97b24-ed0e-46e8-9f78-8f954aead2f8?mocky-delay=5s")
+    cpFetch("https://run.mocky.io/v3/753aa609-65ae-4109-8f83-9cfe365290f0?mocky-delay=3s"),
+    cpFetch("https://run.mocky.io/v3/30a97b24-ed0e-46e8-9f78-8f954aead2f8?mocky-delay=5s")
 ]).timeout(10000).then((response)=> {
     console.log(`Result :`, response.data);
 }, function (err) {
