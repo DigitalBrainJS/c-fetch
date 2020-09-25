@@ -1,5 +1,5 @@
 {
-  "name": "c-fetch2",
+  "name": "cp-fetch",
   "version": "0.0.0",
   "description": "Abortable fetch wrapper with timeout support",
   "author": {

@@ -2,8 +2,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import { terser } from "rollup-plugin-terser";
 const lib = require("./package.json");
-const outputFileName= 'c-fetch';
-const name= "CFetch";
+const outputFileName= 'cp-fetch';
+const name= "cpFetch";
 
 const mode= process.env.NODE_ENV;
 const input = './lib/index.js';
