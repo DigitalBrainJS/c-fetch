@@ -7,6 +7,10 @@
     "email": "robotshara@gmail.com",
     "url": "http://github.com/DigitalBrainJS/"
   },
+  "repository": "https://github.com/DigitalBrainJS/c-fetch.git",
+  "bugs": {
+    "url": "https://github.com/DigitalBrainJS/c-fetch/issues"
+  },
   "main": "./lib/index.js",
   "unpkg": {
     "default": "./dist/c-fetch.umd.js"
@@ -34,6 +38,7 @@
     "cancelable",
     "close",
     "request",
+    "axios",
     "ajax"
   ],
   "license": "MIT",
