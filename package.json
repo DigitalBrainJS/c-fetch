@@ -24,13 +24,15 @@
     "test:coverage": "nyc --check-coverage npm run test",
     "coverage:report": "nyc report --reporter=html --reporter=text",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "prepublishOnly": "npm run build && npm run test:coverage",
+    "prepublishOnly": "npm run lint && npm run build && npm run test:coverage",
     "postversion": "git push && git push --tags",
     "build": "rollup -c",
     "build:watch": "nodemon --watch lib/ --exec \\\"npm run build\\\"",
     "dev": "cross-env NODE_ENV=development \"npm run test:watch\"",
     "playground": "node playground/generator.js || true",
-    "playground:watch": "nodemon --watch ./playground --watch lib/ --exec \\\"npm run playground\\\""
+    "playground:watch": "nodemon --watch ./playground --watch lib/ --exec \\\"npm run playground\\\"",
+    "lint": "eslint lib/**/*.js",
+    "fix": "eslint --fix lib/**/*.js"
   },
   "keywords": [
     "fetch",
@@ -57,6 +59,7 @@
     "npm": "^6.14.8",
     "nyc": "^15.1.0",
     "rollup": "^2.26.10",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "eslint": "^7.9.0"
   }
 }
