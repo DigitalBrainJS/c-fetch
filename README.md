@@ -1,7 +1,7 @@
 ![Travis (.com)](https://img.shields.io/travis/com/DigitalBrainJS/c-fetch)
 [![Coverage Status](https://coveralls.io/repos/github/DigitalBrainJS/c-fetch/badge.svg?branch=master)](https://coveralls.io/github/DigitalBrainJS/c-fetch?branch=master)
-![npm](https://img.shields.io/npm/dm/c-fetch)
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/c-fetch)
+![npm](https://img.shields.io/npm/dm/c-fetch2)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/c-fetch2)
 ![David](https://img.shields.io/david/DigitalBrainJS/c-fetch)
 
 ## SYNOPSIS :sparkles:
@@ -26,16 +26,16 @@ abort the related request when you use concurrent requests.
 ## Installation :hammer:
 
 ```bash
-$ npm install c-fetch
+$ npm install c-fetch2
 ```
 
 ```bash
-$ yarn add c-fetch
+$ yarn add c-fetch2
 ```
 
 #### CDN bundle
 
-- [production UMD bundle](https://unpkg.com/c-fetch) (or [minified](https://unpkg.com/c-fetch/dist/c-fetch.umd.min.js) ~31KB)
+- [production UMD bundle](https://unpkg.com/c-fetch2) (or [minified](https://unpkg.com/c-fetch2/dist/c-fetch.umd.min.js) ~31KB)
 
 ## Usage examples
 
@@ -47,7 +47,7 @@ $ yarn add c-fetch
 
 A simple example:
 ````javascript
-const cFetch= require('c-fetch');
+const cFetch= require('c-fetch2');
 const url= 'https://run.mocky.io/v3/753aa609-65ae-4109-8f83-9cfe365290f0?mocky-delay=5s';
 
 const chain = cFetch(url, {timeout: 10000})
@@ -63,7 +63,7 @@ setTimeout(()=> chain.cancel(), 1000); // abort the request after 1000ms
 The same using generators as async function:
 
 ````javascript
-const cFetch= require('c-fetch');
+const cFetch= require('c-fetch2');
 const CPromise= require('c-promise2');
 const url= 'https://run.mocky.io/v3/753aa609-65ae-4109-8f83-9cfe365290f0?mocky-delay=5s';
 
@@ -82,7 +82,7 @@ const chain= CPromise.from(function*(){
 #### Abortable concurrent requests
 
 ````javascript
-const cFetch= require('c-fetch');
+const cFetch= require('c-fetch2');
 const CPromise = require('c-promise2');
 
 const chain= CPromise.race([
