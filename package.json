@@ -13,7 +13,7 @@
   },
   "main": "./lib/index.js",
   "unpkg": {
-    "default": "./dist/c-fetch.umd.js"
+    "default": "./dist/cp-fetch.umd.js"
   },
   "directories": {
     "lib": "lib"

@@ -6,7 +6,7 @@
 
 ## SYNOPSIS :sparkles:
 
-cpFetch is a simple wrapper around fetch using cancelable promise ([CPromise](https://www.npmjs.com/package/c-promise2)). 
+cpFetch is a simple wrapper around `fetch` using cancelable promise ([CPromise](https://www.npmjs.com/package/c-promise2)). 
 This lib can be used for both backend and frontend development, platform specific fetch API is provided by 
 [cross-fetch package](https://www.npmjs.com/package/cross-fetch).
 
