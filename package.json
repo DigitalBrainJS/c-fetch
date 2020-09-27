@@ -36,12 +36,17 @@
   },
   "keywords": [
     "fetch",
+    "cancel",
     "abortable",
     "cancelable",
+    "cancellable",
+    "ajax",
+    "abort",
     "close",
     "request",
     "axios",
-    "ajax"
+    "AbortController",
+    "signal"
   ],
   "license": "MIT",
   "dependencies": {

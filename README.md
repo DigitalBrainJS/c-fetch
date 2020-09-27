@@ -114,6 +114,12 @@ Options:
 `...nativeFetchOptions`- other native options of the fetch function.
 
 Learn more about [CPromise features](https://www.npmjs.com/package/c-promise2) 
+
+## Related projects
+
+- [cp-axios](https://www.npmjs.com/package/cp-axios) - a simple axios wrapper that provides an advanced cancellation api 
+- [c-promise2](https://www.npmjs.com/package/c-promise2) - promise with cancellation and progress capturing support 
+
 ## License
 
 The MIT License Copyright (c) 2020 Dmitriy Mozgovoy robotshara@gmail.com
