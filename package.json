@@ -50,7 +50,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "c-promise2": "*",
+    "c-promise2": "^0.10.0",
     "cross-fetch": "^3.0.6"
   },
   "devDependencies": {
