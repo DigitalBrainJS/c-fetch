@@ -1,5 +1,5 @@
 const assert= require('assert');
-const CPromise= require('c-promise2');
+const {CPromise}= require('c-promise2');
 const cFetch= require('../../lib/index');
 
 describe('cFetch', function(){
