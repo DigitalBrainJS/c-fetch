@@ -6,7 +6,7 @@
 
 ## SYNOPSIS :sparkles:
 
-cpFetch is a simple wrapper around `fetch` using cancelable promise ([CPromise](https://www.npmjs.com/package/c-promise2)). 
+cpFetch is a simple wrapper around `fetch` with cancelable promise ([c-promise2](https://www.npmjs.com/package/c-promise2)). 
 This lib can be used for both backend and frontend development, platform specific fetch API is provided by 
 [cross-fetch package](https://www.npmjs.com/package/cross-fetch).
 
@@ -33,11 +33,21 @@ $ npm install cp-fetch
 $ yarn add cp-fetch
 ```
 
+````javascript
+// cross-platform version
+const cpFetch= require('cpFetch'); 
+
+// version that uses the global fetch API, instead of cross-fetch ponyfill 
+// (for modern browsers only or in case you're using third-party polyfill)
+const cpFetch= require('cpFetch/lib/native');
+````
+
 #### CDN bundle
+Ready for use prebuilt UMD bundles with all dependencies inside.
+- [production UMD cross-platform bundle with fetch ponyfill](http://unpkg.com/cp-fetch/dist/cp-fetch.umd.js) ([minified](https://unpkg.com/cp-fetch/dist/cp-fetch.umd.min.js) ~31KB)
+- [production UMD bundle](http://unpkg.com/cp-fetch/dist/native/cp-fetch.umd.js) ([minified](http://unpkg.com/cp-fetch/dist/native/cp-fetch.umd.min.js) ~22KB)
 
-- [production UMD bundle](https://unpkg.com/cp-fetch) (or [minified](https://unpkg.com/cp-fetch/dist/cp-fetch.umd.min.js) ~31KB)
-
-module global export- `cpFetch`
+Global module export is `cpFetch`.
 
 ## Usage examples
 

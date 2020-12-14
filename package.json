@@ -12,8 +12,10 @@
     "url": "https://github.com/DigitalBrainJS/c-fetch/issues"
   },
   "main": "./lib/index.js",
+  "browser": "./lib/index.js",
   "unpkg": {
-    "default": "./dist/cp-fetch.umd.js"
+    "default": "/dist/cp-fetch.umd.js",
+    "production": "/dist/cp-fetch.umd.min.js"
   },
   "directories": {
     "lib": "lib"
@@ -50,7 +52,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "c-promise2": "^0.10.1",
+    "c-promise2": "^0.10.8",
     "cross-fetch": "^3.0.6"
   },
   "devDependencies": {

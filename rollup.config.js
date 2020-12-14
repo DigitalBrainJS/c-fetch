@@ -6,7 +6,8 @@ const outputFileName= 'cp-fetch';
 const name= "cpFetch";
 
 const mode= process.env.NODE_ENV;
-const input = './lib/index.js';
+const src = './lib/index.js';
+const srcNative = './lib/native/index.js';
 
 const startYear= 2020;
 const year= new Date().getFullYear();
@@ -14,7 +15,7 @@ const banner= `// ${lib.name} v${lib.version}\n// Copyright (c) ${year===startYe
 
 const config = mode === 'development' ? [
         {
-            input,
+            input: src,
             output: {
                 file: `dist/${outputFileName}.js`,
                 format: 'cjs',
@@ -29,7 +30,7 @@ const config = mode === 'development' ? [
     ] :
     [
         {
-            input,
+            input: src,
             output: {
                 file: `dist/${outputFileName}.umd.js`,
                 format: 'umd',
@@ -43,7 +44,7 @@ const config = mode === 'development' ? [
             ]
         },
         {
-            input,
+            input: src,
             output: {
                 file: `dist/${outputFileName}.umd.min.js`,
                 format: 'umd',
@@ -56,7 +57,38 @@ const config = mode === 'development' ? [
                 commonjs(),
                 terser()
             ]
-        }
+        },
+
+        {
+            input: srcNative,
+            output: {
+                file: `dist/native/${outputFileName}.umd.js`,
+                format: 'umd',
+                name,
+                exports: "auto",
+                banner
+            },
+            plugins: [
+                resolve(),
+                commonjs()
+            ]
+        },
+
+        {
+            input: srcNative,
+            output: {
+                file: `dist/native/${outputFileName}.umd.min.js`,
+                format: 'umd',
+                name,
+                exports: "auto",
+                banner
+            },
+            plugins: [
+                resolve(),
+                commonjs(),
+                terser()
+            ]
+        },
     ];
 
 
