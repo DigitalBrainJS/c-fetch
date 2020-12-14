@@ -43,9 +43,13 @@ const cpFetch= require('cpFetch/lib/native');
 ````
 
 #### CDN bundle
-Ready for use prebuilt UMD bundles with all dependencies inside.
-- [production UMD cross-platform bundle with fetch ponyfill](http://unpkg.com/cp-fetch/dist/cp-fetch.umd.js) ([minified](https://unpkg.com/cp-fetch/dist/cp-fetch.umd.min.js) ~31KB)
-- [production UMD bundle](http://unpkg.com/cp-fetch/dist/native/cp-fetch.umd.js) ([minified](http://unpkg.com/cp-fetch/dist/native/cp-fetch.umd.min.js) ~22KB)
+Ready for use prebuilt UMD bundles for browser with all dependencies inside.
+- [production UMD cross-platform bundle with fetch ponyfill](http://unpkg.com/cp-fetch/dist/cp-fetch.umd.js) ([minified](https://unpkg.com/cp-fetch/dist/cp-fetch.umd.min.js) ~32KB)
+- [production UMD bundle](http://unpkg.com/cp-fetch/dist/native/cp-fetch.umd.js) ([minified](http://unpkg.com/cp-fetch/dist/native/cp-fetch.umd.min.js) ~25KB)
+
+These module bundles are only suitable to load as a script directly from the html page. 
+If you're using some module bunlder like `webpack` or `rollup`, 
+please import cjs module to avoid potential duplications in your project dependencies tree.
 
 Global module export is `cpFetch`.
 

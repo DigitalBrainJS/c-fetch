@@ -23,7 +23,7 @@ const config = mode === 'development' ? [
                 exports: "auto"
             },
             plugins: [
-                resolve(),
+                resolve({browser: true}),
                 commonjs()
             ]
         },
@@ -39,7 +39,7 @@ const config = mode === 'development' ? [
                 banner
             },
             plugins: [
-                resolve(),
+                resolve({browser: true}),
                 commonjs()
             ]
         },
@@ -53,7 +53,7 @@ const config = mode === 'development' ? [
                 banner
             },
             plugins: [
-                resolve(),
+                resolve({browser: true}),
                 commonjs(),
                 terser()
             ]
@@ -69,7 +69,7 @@ const config = mode === 'development' ? [
                 banner
             },
             plugins: [
-                resolve(),
+                resolve({browser: true}),
                 commonjs()
             ]
         },
@@ -84,7 +84,7 @@ const config = mode === 'development' ? [
                 banner
             },
             plugins: [
-                resolve(),
+                resolve({browser: true}),
                 commonjs(),
                 terser()
             ]
