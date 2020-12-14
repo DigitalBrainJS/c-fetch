@@ -1,6 +1,6 @@
 {
   "name": "cp-fetch",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Abortable fetch wrapper with timeout support",
   "author": {
     "name": "Dmitriy Mozgovoy",
