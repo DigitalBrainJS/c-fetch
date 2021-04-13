@@ -8,7 +8,7 @@ describe('cFetch', function(){
 
        return cFetch(url, {timeout: 1000})
             .then(response => response.json())
-            .then(data => console.log(`Done: `, data), err => console.log(`Error: `, err))
+            .then(data => console.log(`Done: `, data), err => console.log(`Error: `, err.toString()))
     })
 
     it('should handle timeout', async function () {
