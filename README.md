@@ -39,7 +39,7 @@ const cpFetch= require('cpFetch');
 
 // version that uses the global fetch API, instead of cross-fetch ponyfill 
 // (for modern browsers only or in case you're using third-party polyfill)
-const cpFetch= require('cpFetch/lib/native');
+import cpFetch from "cpFetch/native";
 ````
 
 #### CDN bundle
