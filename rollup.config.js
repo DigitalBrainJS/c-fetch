@@ -62,7 +62,7 @@ const config = mode === 'development' ? [
         {
             input: srcNative,
             output: {
-                file: `dist/native/${outputFileName}.umd.js`,
+                file: `dist/native/index.js`,
                 format: 'umd',
                 name,
                 exports: "auto",
@@ -77,7 +77,7 @@ const config = mode === 'development' ? [
         {
             input: srcNative,
             output: {
-                file: `dist/native/${outputFileName}.umd.min.js`,
+                file: `dist/native/index.min.js`,
                 format: 'umd',
                 name,
                 exports: "auto",

@@ -39,13 +39,13 @@ const cpFetch= require('cpFetch');
 
 // version that uses the global fetch API, instead of cross-fetch ponyfill 
 // (for modern browsers only or in case you're using third-party polyfill)
-import cpFetch from "cpFetch/native";
+import cpFetch from "cp-fetch/lib/native";
 ````
 
 #### CDN bundle
 Ready for use prebuilt UMD bundles for browser with all dependencies inside.
 - [production UMD cross-platform bundle with fetch ponyfill](http://unpkg.com/cp-fetch/dist/cp-fetch.umd.js) ([minified](https://unpkg.com/cp-fetch/dist/cp-fetch.umd.min.js) ~32KB)
-- [production UMD bundle](http://unpkg.com/cp-fetch/dist/native/cp-fetch.umd.js) ([minified](http://unpkg.com/cp-fetch/dist/native/cp-fetch.umd.min.js) ~25KB)
+- [production UMD bundle](http://unpkg.com/cp-fetch/dist/native/index.umd.js) ([minified](http://unpkg.com/cp-fetch/dist/native/index.min.js) ~25KB)
 
 These module bundles are only suitable to load as a script directly from the html page. 
 If you're using some module bunlder like `webpack` or `rollup`, 
@@ -133,6 +133,8 @@ Learn more about [CPromise features](https://www.npmjs.com/package/c-promise2)
 
 - [cp-axios](https://www.npmjs.com/package/cp-axios) - a simple axios wrapper that provides an advanced cancellation api 
 - [c-promise2](https://www.npmjs.com/package/c-promise2) - promise with cancellation and progress capturing support 
+- [use-async-effect2](https://www.npmjs.com/package/use-async-effect2) - cancel async code in functional React components
+- [cp-koa](https://www.npmjs.com/package/cp-koa) - Koa with cancelable middlewares
 
 ## License
 
